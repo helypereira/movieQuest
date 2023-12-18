@@ -1,0 +1,155 @@
+:root {
+    --sky-blue: #1472ff;
+    --smooke: #dee2e6;
+    --light-gray: #f8f9fa;
+    --title-font: 'Adamina', serif;
+    --general-font: 'Fira Sans Condensed', sans-serif;
+}
+
+* {
+    font-family: var(--general-font);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    margin: 50px 80px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin: 0 0 0px 20px;
+    font-size: 42px;
+    font-family: var(--title-font);
+}
+
+nav svg {
+    width: 12%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+#container {
+    display: flex;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--light-gray);
+    border: 1px solid var(--smooke);
+    border-radius: 5px;
+    padding: 0 50px;
+}
+
+#form-container .subtitle span{
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid var(--smooke);
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 40%;
+    font-size: 24px;
+    border: none;
+    background-color: var(--sky-blue);
+    color: white;
+    margin-left: 20px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+:focus {
+    color: var(--sky-blue);
+}
+
+input[type="submit"]:hover {
+    background-color: #074db7;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#trending {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 50px;
+}
+
+.trending {
+    width: 41%;
+    margin: 0px 20px;
+}
+
+#trending h3 {
+    width: 100%;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0 0 20px 20px;
+    font-weight: 500;
+}
+
+.movie-cover {
+    width: 100%;
+}
+
+.movie-title {
+    font-size: 14px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.movie-date {
+    font-weight: 400;
+    margin: 0;
+    font-size: 12px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 80px 10px 80px;
+    border-top: 1px solid var(--sky-blue);
+    margin: 100px 80px 0px 80px;
+}
+footer img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}

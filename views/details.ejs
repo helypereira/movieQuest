@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+    <section id="films">
+                <% for (let i = 0; i < content.results.length; i++) { %>
+                    <article class="film-information">
+                    <img src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/<%= content.results[i].poster_path %>" alt="">
+                    <div>
+                        <h3 class="movie-title-detail"><%= content.results[i].original_title %></h3>
+                        <h5 class="movie-date-detail"><%= content.results[i].release_date%> <br>id: <%= content.results[i].id%></h5>
+                        <p class="detail-text"><%= content.results[i].overview %> </p>
+                        <ul>
+                            <li>Popularity: <%= content.results[i].popularity %></li>
+                            <li>Original Language: <%= content.results[i].original_language %></li>
+                        </ul>
+                    </div>
+                    </article>
+                <% } %>
+    </section>
+<%- include('partials/footer.ejs') %>   

@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs') %>
+        <section id="container">
+            <article id="form-container">
+                <h2 class="title">Welcome.</h2>
+                <h3 class="subtitle"> Discover millions of movies, television programs, and people. <span>Begin exploring now.</span></h3>
+                <form method="POST" action="/get-movie">
+                    <input type="text" id="movie" name="movie" placeholder="Search for a movie" required><br>
+                    <input type="submit" value="Search">
+                </form>                
+                
+            </article>
+        </section>
+        <section id="trending">
+            <h3>Trending Today</h3>
+            <% for (let i = 0; i < 2 && i < trending.results.length; i++) { %>
+                <article class="trending">
+                    <img src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2/<%= trending.results[i].poster_path %>" alt="poster img">
+                    <h4 class="movie-date"><%= trending.results[i].release_date %></h4>
+                    <h5 class="movie-title"><%= trending.results[i].original_title %></h5>
+                </article>
+            <% } %>
+        </section>
+<%- include('partials/footer.ejs') %>
