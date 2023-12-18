@@ -7,13 +7,12 @@ const API_URL = "https://api.themoviedb.org/3/search/movie?query=";
 const trendingMovies = "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
 
 // const key = token;
+const key = process.env.MOVIEDB_TOKEN;
 
 if (!key) {
     console.error("Error: La variable de entorno MOVIEDB_TOKEN no está configurada.");
     process.exit(1); // Termina el proceso con un código de salida no exitoso (1)
 }  
-
-const key = process.env.MOVIEDB_TOKEN;
 
 const config = {
     headers: { Authorization: `Bearer ${key}`},
